@@ -1,30 +1,25 @@
 
-let dia_escolhido = prompt("Informe o numero do dia da semana a exibir:");
-let mensagem = "";
+let aluno = "";
+let nota1, nota2, nota3 = 0;
+const quantidadeProvas = 3;
 
-if (dia_escolhido == 1) {
-    mensagem = ("Domingo");
-}
-else if (dia_escolhido == 2) {
-    mensagem = ("Segunda-feira");
-}
-else if (dia_escolhido == 3) {
-    mensagem = ("Terça-feira");
-}
-else if (dia_escolhido == 4) {
-    mensagem = ("Quarta-feira");
-}
-else if (dia_escolhido == 5) {
-    mensagem = ("Quinta-Fira");
-}
-else if (dia_escolhido == 6) {
-    mensagem = ("Sexta-feira");
-}
-else if (dia_escolhido == 7) {
-    mensagem = ("Sábado");
-}
-else {
-    mensagem = ("Inválido");
+aluno = prompt("Digite o Nome do Aluno 1:");
+nota1 = parseFloat(prompt("Digite a Nota 1 do Aluno: "));
+nota2 = parseFloat(prompt("Digite a Nota 2 do Aluno: "));
+nota3 = parseFloat(prompt("Digite a Nota 3 do Aluno: "));
+
+let media = 0;
+media = (nota1 + nota2 + nota3) / quantidadeProvas;
+
+var mensagem = `${aluno}, sua média é ${media} parabéns!;`
+
+
+if (media >= 7) {
+    mensagem = ("O aluno está aprovado.");
+} else if (media >= 5) {
+    mensagem = ("O aluno está recuperação.");
+} else {
+    mensagem = ("O aluno está de reprovado.");
 }
 
 alert(mensagem);
