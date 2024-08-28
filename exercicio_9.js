@@ -4,6 +4,7 @@ let textoMenu = `Escolha o turno em que você estuda:
                 N - Noturno`;
 
 let turnoescolhido = (prompt(textoMenu));
+turnoescolhido = turnoescolhido.toUpperCase();
 let turno;
 let mensangem = "";
 
